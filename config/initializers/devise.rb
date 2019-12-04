@@ -301,5 +301,5 @@ Devise.setup do |config|
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
 
-  config.omniauth :twitter, "k9TA5ldaiGwiDN88oVYGefwLq", "kCLqFTWVb71E9z9q5T7jF1nfFXQOU1lXVKnr9XpzdSfucinYs3"
+  config.omniauth :twitter, Settings.twitter[:apikey], Settings.twitter[:apisecret]
 end
