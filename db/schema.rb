@@ -10,7 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_053945) do
+ActiveRecord::Schema.define(version: 2019_12_06_111600) do
+
+  create_table "friends", force: :cascade do |t|
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_friends_on_user_id"
+  end
+
+  create_table "item_basics", force: :cascade do |t|
+    t.integer "friend_id"
+    t.string "name"
+    t.integer "sex"
+    t.date "birthday"
+    t.string "meet"
+    t.string "tel"
+    t.string "url"
+    t.string "company"
+    t.string "address"
+    t.string "birthplace"
+    t.string "twitter"
+    t.string "facebook"
+    t.string "instagram"
+    t.string "line"
+    t.string "linkedin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["friend_id"], name: "index_item_basics_on_friend_id"
+  end
+
+  create_table "item_keys", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "item_values", force: :cascade do |t|
+    t.integer "friend_id"
+    t.integer "item_key_id"
+    t.text "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["friend_id"], name: "index_item_values_on_friend_id"
+    t.index ["item_key_id"], name: "index_item_values_on_item_key_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
