@@ -72,8 +72,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    composite_primary_keys (11.2.0)
-      activerecord (~> 5.2.1)
     concurrent-ruby (1.1.5)
     config (2.0.0)
       activesupport (>= 4.2)
@@ -153,7 +151,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     nio4r (2.5.2)
-    nokogiri (1.10.5)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     oauth (0.5.4)
     oauth2 (1.4.2)
@@ -281,7 +279,6 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
-  composite_primary_keys
   config
   devise
   jbuilder (~> 2.5)
