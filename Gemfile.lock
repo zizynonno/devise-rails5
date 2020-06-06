@@ -72,8 +72,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    composite_primary_keys (11.2.0)
-      activerecord (~> 5.2.1)
     concurrent-ruby (1.1.5)
     config (2.0.0)
       activesupport (>= 4.2)
@@ -268,7 +266,7 @@ GEM
       railties (>= 5.0)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.4)
+    websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
 
@@ -281,7 +279,6 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
-  composite_primary_keys
   config
   devise
   jbuilder (~> 2.5)
